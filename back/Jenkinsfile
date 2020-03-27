@@ -9,12 +9,12 @@ node{
 		app = docker.build("dashboard/back-test-jenkins")
 	}
 
-	stage('Run image'){
-		docker.image('dashboard/back-test-jenkins').withRun('-p 8082:80'){c ->
-		sh 'docker ps'
-
-		sh 'curl localhost:8082'
-	}	
+//	stage('Run image'){
+//		docker.image('dashboard/back-test-jenkins').withRun('-p 8082:80'){c ->
+//		sh 'docker ps'
+//
+//		sh 'curl localhost:8082'
+//	}	
 	
 	}
 
