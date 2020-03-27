@@ -6,7 +6,7 @@ node{
 	}
 
 	stage('Build image'){
-		app = docker.build("dashboard/front-test-jenkins","front/Dockerfile")
+		app = docker.build("dashboard/front-test-jenkins","-f front/Dockerfile")
 	}
 
 //	stage('Run image'){
