@@ -8,6 +8,9 @@ import com.mixer.api.response.channels.ShowChannelsResponse;
 import com.mixer.api.services.impl.ChannelsService;
 import com.mixer.api.services.impl.UsersService;
 
+import api.LogHandler;
+import api.LogHandler.logType;
+
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -22,6 +25,7 @@ public class MixerConnector implements Connector{
      */
     public MixerConnector(String token){
         mixer = new MixerAPI(token);
+        LogHandler.addLog("MixerConnector Initialized", logType.INFO);
     }
 
     /**
@@ -34,8 +38,23 @@ public class MixerConnector implements Connector{
     public int getCurrentViewers(String username) throws ExecutionException, InterruptedException {
         MixerChannel channel = mixer.use(ChannelsService.class).findOneByToken(username).get();
         int viewers = channel.viewersCurrent;
-        System.out.format("You have %d total views...\n", viewers);
+        LogHandler.addLog("Viewers for user "+username+" : "+ viewers, logType.INFO);
         return viewers;
     }
+
+    public String getProfilePict(String username) throws ExecutionException, InterruptedException {
+        MixerUser user = mixer.use(UsersService.class).findOneByToken(username).get();
+        String pict = user.avatarUrl;
+        LogHandler.addLog("Profile picture for user "+username+" : "+ pict, logType.INFO);
+        return pict;
+    }
+
+    public int getFollower(String username) throws ExecutionException, InterruptedException {
+        MixerChannel channel = mixer.use(ChannelsService.class).findOneByToken(username).get();
+        int follower = channel.numFollowers;
+        LogHandler.addLog("Follower for user "+username+" : "+ follower, logType.INFO);
+        return follower;
+    }
+
 
 }
