@@ -1,30 +1,16 @@
-	tools {
-	maven 'M3'
-	}
-node{
-	def app
-	
-
-	
-	stage ('Clone'){
-		checkout scm	
-	}
-
-	stage('Build image'){
-		sh  'cd back/ && mvn package'
+pipeline {
+  agent any
+  tools {
+    maven 'M3'
+  }
+  stages {
+    stage('Build image') {
+      steps {
+        	sh  'cd back/ && mvn package'
 		sh 'mkdir -p target/dependency && (cd target/dependency; jar -xf ../*jar)'
 		
 		app = docker.build("dashboard/back-test-jenkins","./back")
-	}
-
-//	stage('Run image'){
-//		docker.image('dashboard/back-test-jenkins').withRun('-p 8082:80'){c ->
-//		sh 'docker ps'
-//
-//		sh 'curl localhost:8082'
-//	}	
-	
-//	}
-
-
+      }
+    }
+  }
 }
