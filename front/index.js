@@ -8,9 +8,21 @@ var url = "http://90.89.7.235:8082/getProfilePict?boxname=image1&username="+user
 				$.get(url, function( data ) {
 				  $("#image1").attr("src", data);
 				});
+var url = "http://90.89.7.235:8082/getProfilePict?boxname=image2&username="+userName
+				$.get(url, function( data ) {
+				  $("#image2").attr("src", data);
+				});
 }
 
 function fillCompareColumn(index) {
 	var userCompare = $("#userCompare").val();
 	$("#user" + index).text(userCompare);
+var url = "http://90.89.7.235:8082/getViewerCount?boxname=table&username="+userCompare
+					$.get(url, function( data ) {
+					  $("#getViewerCount + index").text(data);
+					});
+var url = "http://90.89.7.235:8082/getFollowers?boxname=table&username="+userCompare
+					$.get(url, function( data ) {
+					  $("#getFollowers + index").text(data);
+					});
 }
