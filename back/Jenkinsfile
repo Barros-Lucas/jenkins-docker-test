@@ -6,9 +6,7 @@ pipeline {
   stages {
     stage('Build image') {
       steps {
-        	sh  'cd back/'
-	      	sh 'ls'
-	      	sh 'mvn package'
+        	sh  'cd back/ && ls && mvn package'
 		sh 'mkdir -p target/dependency && (cd target/dependency; jar -xf ../*jar)'
 		
 		dockerfile {
