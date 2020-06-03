@@ -1,0 +1,121 @@
+[INFO] 2020/02/06 11:56:09.759 Server Starting
+[INFO] 2020/02/06 11:56:18.939 MixerConnector Initialized
+[INFO] 2020/02/06 11:56:18.939 Requesting for the current viewer count for user Ninja
+[INFO] 2020/02/06 11:57:30.145 Server Starting
+[INFO] 2020/02/06 11:57:39.618 MixerConnector Initialized
+[INFO] 2020/02/06 11:57:39.619 Requesting for the current viewer count for user Ninja
+[INFO] 2020/02/06 11:57:40.260 Viewer for user Ninja : 0
+[INFO] 2020/06/02 15:06:15.667 Server Starting
+[INFO] 2020/06/02 15:07:26.851 Requesting Hello world
+[INFO] 2020/06/02 15:08:48.865 MixerConnector Initialized
+[INFO] 2020/06/02 15:08:48.865 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:08:49.350 Profile picture for user zedgehog : com.mixer.api.resource.channel.MixerResource@3b303e2b
+[INFO] 2020/06/02 15:09:32.546 Server Starting
+[INFO] 2020/06/02 15:09:42.241 MixerConnector Initialized
+[INFO] 2020/06/02 15:09:42.242 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:09:42.765 Profile picture for user zedgehog : com.mixer.api.resource.channel.MixerResource@3407237c
+[INFO] 2020/06/02 15:10:11.354 Server Starting
+[INFO] 2020/06/02 15:10:18.149 MixerConnector Initialized
+[INFO] 2020/06/02 15:10:18.149 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:10:18.489 Profile picture for user zedgehog : com.mixer.api.resource.channel.MixerResource@5421e32c
+[INFO] 2020/06/02 15:12:00.063 Server Starting
+[INFO] 2020/06/02 15:12:01.292 Server Starting
+[INFO] 2020/06/02 15:12:07.036 Server Starting
+[INFO] 2020/06/02 15:12:25.923 MixerConnector Initialized
+[INFO] 2020/06/02 15:12:25.923 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:12:26.454 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:12:31.630 MixerConnector Initialized
+[INFO] 2020/06/02 15:12:31.630 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:12:31.784 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:18:34.860 MixerConnector Initialized
+[INFO] 2020/06/02 15:18:34.860 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:18:35.134 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:19:14.451 Server Starting
+[INFO] 2020/06/02 15:19:25.028 MixerConnector Initialized
+[INFO] 2020/06/02 15:19:25.028 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:19:25.370 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:20:26.428 Server Starting
+[INFO] 2020/06/02 15:20:30.289 MixerConnector Initialized
+[INFO] 2020/06/02 15:20:30.289 MixerConnector Initialized
+[INFO] 2020/06/02 15:20:30.289 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:20:30.289 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:20:30.869 Error while fetching profile picture for user zedgehog
+ error : java.lang.NumberFormatException: For input string: ".2202222022EE44"
+[ERROR] 2020/06/02 15:20:30.869 Error while fetching profile picture for user zedgehog
+ error : java.lang.NumberFormatException: For input string: ".2202222022EE44"
+[INFO] 2020/06/02 15:20:36.973 MixerConnector Initialized
+[INFO] 2020/06/02 15:20:36.974 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:20:37.109 Profile picture for user zedgehog : com.mixer.api.resource.channel.MixerResource@1a1a36dc
+[INFO] 2020/06/02 15:25:56.677 Server Starting
+[INFO] 2020/06/02 15:26:10.674 MixerConnector Initialized
+[INFO] 2020/06/02 15:26:10.674 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:26:11.290 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:26:19.407 MixerConnector Initialized
+[INFO] 2020/06/02 15:26:19.407 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:26:19.557 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:26:52.385 Server Starting
+[INFO] 2020/06/02 15:27:03.589 MixerConnector Initialized
+[INFO] 2020/06/02 15:27:03.590 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:27:04.102 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:28:52.375 Server Starting
+[INFO] 2020/06/02 15:29:00.076 MixerConnector Initialized
+[INFO] 2020/06/02 15:29:00.078 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:29:00.495 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:29:31.099 Server Starting
+[INFO] 2020/06/02 15:29:38.579 MixerConnector Initialized
+[INFO] 2020/06/02 15:29:38.579 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:29:38.993 Profile picture for user zedgehog : https://uploads.mixer.com/badges/jc3rv96y-588454.png
+[INFO] 2020/06/02 15:39:04.115 MixerConnector Initialized
+[INFO] 2020/06/02 15:39:04.115 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:39:04.406 Profile picture for user zedgehog : https://uploads.mixer.com/badges/jc3rv96y-588454.png
+[INFO] 2020/06/02 15:41:15.125 Server Starting
+[INFO] 2020/06/02 15:41:44.307 MixerConnector Initialized
+[INFO] 2020/06/02 15:41:44.308 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:41:45.006 Profile picture for user zedgehog : toto
+[INFO] 2020/06/02 15:42:57.883 Server Starting
+[INFO] 2020/06/02 15:43:07.549 MixerConnector Initialized
+[INFO] 2020/06/02 15:43:07.549 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:43:07.979 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:43:48.420 Server Starting
+[INFO] 2020/06/02 15:43:55.080 MixerConnector Initialized
+[INFO] 2020/06/02 15:43:55.081 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:43:55.530 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:44:54.237 Server Starting
+[INFO] 2020/06/02 15:44:58.402 MixerConnector Initialized
+[INFO] 2020/06/02 15:44:58.402 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:44:58.771 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:45:01.894 MixerConnector Initialized
+[INFO] 2020/06/02 15:45:01.895 Requesting for the profile picture user zedgehog
+[ERROR] 2020/06/02 15:45:02.045 Error while fetching profile picture for user zedgehog
+ error : null
+[INFO] 2020/06/02 15:52:01.921 Server Starting
+[INFO] 2020/06/02 15:52:12.995 Server Starting
+[INFO] 2020/06/02 15:52:22.230 MixerConnector Initialized
+[INFO] 2020/06/02 15:52:22.231 Requesting for the profile picture user zedgehog
+[INFO] 2020/06/02 15:56:33.847 Profile picture for user zedgehog : toto
+[INFO] 2020/06/02 15:56:39.739 MixerConnector Initialized
+[INFO] 2020/06/02 15:56:39.740 Requesting for the profile picture user Spartakus
+[INFO] 2020/06/02 15:58:55.940 Profile picture for user Spartakus : toto
+[INFO] 2020/06/02 15:58:58.232 Server Starting
+[INFO] 2020/06/02 15:59:35.443 Server Starting
+[INFO] 2020/06/02 15:59:44.213 MixerConnector Initialized
+[INFO] 2020/06/02 15:59:44.213 Requesting for the profile picture user Spartakus
+[INFO] 2020/06/02 16:00:32.136 Profile picture for user Spartakus : toto
+[INFO] 2020/06/02 16:30:21.183 Server Starting
+[INFO] 2020/06/02 16:30:41.213 MixerConnector Initialized
+[INFO] 2020/06/02 16:30:41.214 Requesting for the profile picture user Spartakus
+[INFO] 2020/06/02 16:37:24.427 Server Starting
+[INFO] 2020/06/02 16:37:29.257 MixerConnector Initialized
+[INFO] 2020/06/02 16:37:29.258 Requesting for the current viewer count for user Spartakus
+[INFO] 2020/06/02 16:37:29.777 Follower for user Spartakus : 82549
