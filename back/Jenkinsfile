@@ -1,9 +1,10 @@
-node{
-	def app
-	
 	tools {
 	maven 'M3'
 	}
+node{
+	def app
+	
+
 	
 	stage ('Clone'){
 		checkout scm	
