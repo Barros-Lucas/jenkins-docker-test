@@ -6,8 +6,8 @@ pipeline {
   stages {
     stage('Build image') {
       steps {
-        	sh  'cd back/ && ls && mvn clean package'
-		sh 'mkdir -p target/dependency && (cd target/dependency; jar -xf ../*jar)'
+        	sh  'cd back/ && mvn package'
+		sh 'mkdir -p target/dependency && (cd target/dependency && ls && jar -xf ../*jar)'
 		
 		dockerfile {
 			filename 'dashboard/back-test-jenkins'
