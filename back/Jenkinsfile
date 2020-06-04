@@ -8,7 +8,7 @@ pipeline {
       steps {
         	sh  'cd back/ && mvn package'
 	      	su 'ls'
-		sh 'mkdir -p target/dependency && ls && (cd target/dependency; jar -xf ../*jar)'
+		sh 'mkdir -p back/target/dependency && ls && (cd back/target/dependency; jar -xf ../*jar)'
 		
 		dockerfile {
 			filename 'dashboard/back-test-jenkins'
