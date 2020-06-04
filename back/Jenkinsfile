@@ -11,10 +11,8 @@ pipeline {
 	      	sh 'cd back/target/dependency && jar -xf ../*jar'
 	      	sh 'docker ps -al'
 		
-		dockerfile {
-			filename 'dashboard/back-test-jenkins'
-			dir 'back'
-		}
+	      	sh 'docker build -t dashboard/back-test-jenkins .'
+
       }
     }
   }
