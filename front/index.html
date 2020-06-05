@@ -6,107 +6,288 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-        <script src="index.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@1.1.1/dist/gridstack.min.css" />
+                <script src="https://cdn.jsdelivr.net/npm/gridstack@1.1.1/dist/gridstack.all.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+		
 		<title>mixer</title>
 	</head>
 	<body>
         <div id="container-fluid">
-            <nav class="navbar navbar-expand navbar-light bg-primary topbar mb-4 static-top shadow">
-              <a class="navbar-brand" href="index.html">
-              	<img src="https://static.wikia.nocookie.net/1d9d0015-f1a1-4140-b686-d771046bbc1f" width="150" height="50" class="d-inline-block align-top" alt="">
-              </a>
-            </nav>
-			<div class="container-fluid">
-              <h1 class="h3 mb-0 text-gray-800">mixer</h1>
-              <hr>
-              <div class="row">
-              	<div class="col-md-10">
-              		<input type="text" class="mb-4 form-control" id="userName" placeholder="User Name">
-              	</div>
-              	<div class="col-md-2">
-              		<div class="btn btn-primary btn-block" onclick="sendUserName()">Submit</div>
-              	</div>
-             </div>
-              <div class="row">
-              <div class="col-xl-3 col-md-6 mb-4">
-                        	<div class="card border-left border-primary shadow h-100 py-2">
-                            	<div class="card-body">
-                      			<div class="row no-gutters align-items-center">
-                      				<div class="col mr-2">
-                      					<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">nbviewers1</div>
-                      					<div id="nbviewers1" class="h5 mb-0 font-weight-bold text-gray-800"></div>
-                      				</div>
-                      				<div class="col-auto">
-                      					<i class="fas fa-calendar fa-2x text-gray-300"></i>
-                      				</div>
-                      			</div>
-                      		</div>
+            <nav class="navbar navbar-light bg-primary mb-4 shadow" style="text-align:center; height : 400px; align-items: start; position:static !important;">
+                      <a class="navbar-brand mt-2" style="text-align: center; width : 100%" href="index.html">
+                          <img src="https://static.wikia.nocookie.net/1d9d0015-f1a1-4140-b686-d771046bbc1f" width="200" height="66" class="d-inline-block align-top" alt="">
+                      </a>
+                    </nav>
+                    <div class="container shadow" style="border-radius : 10px; padding : 30px; margin-top : -20%; background-color: white; z-index:99">
+              <div class="row mb-0">
+	                         <h1 class="h3 mb-0 text-gray-800">Dashboard : mixer</h1>
+	                    </div>
+              <div class="grid-stack m-5 grid-stack-instance-3283" data-gs-current-row="6" style="height: 460px;">
+              <div class="col-xl-12 col-md-12 rounded-right mx-auto grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" data-gs-x="18" data-gs-y="3" data-gs-width="3" data-gs-height="2">
+                          <div class="grid-stack-item-content rounded-right shadow ui-draggable-handle" style="border-left : 5px solid #0275d8;">
+                              <div class="card h-100 py-2" style="border : 0">
+                                  <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                         <div class="col-md-7">
+              	        					<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">nbviewers1</div>
+              	        					<div id="nbviewers1" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+              	        				</div>
+              	        				<div class="col-md-5">
+              	                            <button class="btn btn-block btn-light" data-toggle="modal" data-target="#exampleModalnbviewers1">&#x2699;</button>
+              	                        </div>
+              	        			</div>
+              	        		</div>
+              	        	</div>
                       	</div>
                       </div>
-<div class="col-xl-3 col-md-6 mb-4">
-          	<div class="card border-left border-primary shadow h-100 py-2">
-              	<div class="card-body">
-        			<div class="row no-gutters align-items-center">
-        				<div class="col mr-2">
-        					<img id="image1" width="100" height="100" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png"></img>
-        				</div>
-        				<div class="col-auto">
-        					<i class="fas fa-calendar fa-2x text-gray-300"></i>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
+                      <div class="modal fade" id="exampleModalnbviewers1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Insert data</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                  <input type="text" class="mb-4 form-control" id="inputnbviewers1" placeholder="Username ">
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" onclick="sendUserName('nbviewers1')" class="btn btn-primary">Submit</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+              <div class="col-xl-12 col-md-12 rounded-right mx-auto grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" data-gs-x="21" data-gs-y="3" data-gs-width="3" data-gs-height="2">
+                          <div class="grid-stack-item-content rounded-right shadow ui-draggable-handle" style="border-left : 5px solid #0275d8;">
+                              <div class="card h-100 py-2" style="border : 0">
+                                  <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                         <div class="col-md-7">
+              	        					<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">nbviewers2</div>
+              	        					<div id="nbviewers2" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+              	        				</div>
+              	        				<div class="col-md-5">
+              	                            <button class="btn btn-block btn-light" data-toggle="modal" data-target="#exampleModalnbviewers2">&#x2699;</button>
+              	                        </div>
+              	        			</div>
+              	        		</div>
+              	        	</div>
+                      	</div>
+                      </div>
+                      <div class="modal fade" id="exampleModalnbviewers2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Insert data</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                  <input type="text" class="mb-4 form-control" id="inputnbviewers2" placeholder="Username ">
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" onclick="sendUserName('nbviewers2')" class="btn btn-primary">Submit</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+<div class="col-xl-12 col-md-12 rounded-right mx-auto grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" data-gs-x="24" data-gs-y="3" data-gs-width="3" data-gs-height="3">
+            <div class="grid-stack-item-content rounded-right shadow ui-draggable-handle" style="border-left : 5px solid #0275d8;">
+                <div class="card h-100 py-2" style="border : 0">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                      	<div class="col mr-2">
+                      	  <div class="row">
+                      	  	  <div class="col-md-7">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">image1</div>
+                              </div>
+                              <div class="col-md-5">
+  	                            <button class="btn btn-block btn-light" data-toggle="modal" data-target="#exampleModalimage1">&#x2699;</button>
+  	                          </div>
+                      	  </div>
+	        			  <img id="image1" width="100" height="100" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png"></img>
+	        			 </div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
         </div>
-<div class="col-xl-3 col-md-6 mb-4">
-          	<div class="card border-left border-primary shadow h-100 py-2">
-              	<div class="card-body">
-        			<div class="row no-gutters align-items-center">
-        				<div class="col mr-2">
-        					<img id="image2" width="100" height="100" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png"></img>
-        				</div>
-        				<div class="col-auto">
-        					<i class="fas fa-calendar fa-2x text-gray-300"></i>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
+        <div class="modal fade" id="exampleModalimage1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Insert data</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="mb-4 form-control" id="inputimage1" placeholder="Username ">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" onclick="sendUserName('image1')" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
         </div>
-<div class="col-xl-12 col-md-12 mx-auto">
-	<div class="row">
-              	<div class="col-md-10">
-              		<input type="text" class="mb-4 form-control" id="userCompare" placeholder="User Name">
-              	</div>
-              	<div class="col-md-1">
-              		<div class="btn btn-primary btn-block" onclick="fillCompareColumn(1)">Compare1</div>
-              	</div>
-              	<div class="col-md-1">
-              		<div class="btn btn-primary btn-block" onclick="fillCompareColumn(2)">Compare2</div>
-              	</div>
-          	</div>
-	<table class="table">
-	  	<thead>
-	    	<tr>
-	      		<th scope="col">Comparatif</th>
-				<th id="user1" scope="col">User1</th>
-				<th id="user2" scope="col">User2</th>
-		    </tr>
-		</thead>
-		<tbody>
-		<tr id="getViewerCount">
-				    <th scope="row">getViewerCount</th>
-				    <td id="getViewerCount1">4000</td>
-				    <td id="getViewerCount2">5000</td>
-		</tr>
-		<tr id="getFollowers">
-				    <th scope="row">getFollowers</th>
-				    <td id="getFollowers1">4000</td>
-				    <td id="getFollowers2">5000</td>
-		</tr>
-		</tbody>
-	</table>
+      </div>
+<div class="col-xl-12 col-md-12 rounded-right mx-auto grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" data-gs-x="27" data-gs-y="3" data-gs-width="3" data-gs-height="3">
+            <div class="grid-stack-item-content rounded-right shadow ui-draggable-handle" style="border-left : 5px solid #0275d8;">
+                <div class="card h-100 py-2" style="border : 0">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                      	<div class="col mr-2">
+                      	  <div class="row">
+                      	  	  <div class="col-md-7">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">image2</div>
+                              </div>
+                              <div class="col-md-5">
+  	                            <button class="btn btn-block btn-light" data-toggle="modal" data-target="#exampleModalimage2">&#x2699;</button>
+  	                          </div>
+                      	  </div>
+	        			  <img id="image2" width="100" height="100" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png"></img>
+	        			 </div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+        </div>
+        <div class="modal fade" id="exampleModalimage2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Insert data</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="mb-4 form-control" id="inputimage2" placeholder="Username ">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" onclick="sendUserName('image2')" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="col-xl-12 col-md-12 mx-auto grid-stack-item" data-gs-x="30" data-gs-y="3" data-gs-width="9" data-gs-height="3">
+	<div class="grid-stack-item-content rounded-right shadow ui-draggable-handle p-3" style="border-left : 5px solid #0275d8;">
+		<div class="row">
+	              	<div class="col-md-6">
+	              		<input type="text" class="mb-4 form-control" id="userCompare" placeholder="User Name">
+	              	</div>
+	              	<div class="col-md-3">
+	              		<div class="btn btn-primary btn-block" onclick="fillCompareColumn(1)">Compare1</div>
+	              	</div>
+	              	<div class="col-md-3">
+	              		<div class="btn btn-primary btn-block" onclick="fillCompareColumn(2)">Compare2</div>
+	              	</div>
+	          	</div>
+		<table class="table">
+		  	<thead>
+		    	<tr>
+		      		<th scope="col">Comparatif</th>
+					<th id="user1" scope="col"></th>
+					<th id="user2" scope="col"></th>
+			    </tr>
+			</thead>
+			<tbody>
+			<tr id="getViewerCount">
+					    <th scope="row">getViewerCount</th>
+					    <td id="getViewerCount1"></td>
+					    <td id="getViewerCount2"></td>
+			</tr>
+			<tr id="getFollowers">
+					    <th scope="row">getFollowers</th>
+					    <td id="getFollowers1"></td>
+					    <td id="getFollowers2"></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
+<div class="col-xl-12 col-md-12 rounded-right mx-auto grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" data-gs-x="39" data-gs-y="3" data-gs-width="9" data-gs-height="3">
+            <div class="grid-stack-item-content rounded-right shadow ui-draggable-handle" style="border-left : 5px solid #0275d8;">
+                <div class="card h-100 py-2" style="border : 0">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                      	<div class="col mr-2">
+                      	  <div class="row">
+                      	  	  <div class="col-md-9">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">graph</div>
+                              </div>
+                              <div class="col-md-3">
+	                            <button class="btn btn-block btn-light" data-toggle="modal" data-target="#exampleModalgraph">&#x2699;</button>
+	                          </div>
+                      	  </div>
+	        			  <canvas id="graph"></canvas>
+	        			 </div>
+	        			</div>
+	        		</div>
+	        	</div>
+        	</div>
+        </div>
+        <div class="modal fade" id="exampleModalgraph" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Insert data</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="inputgraph" mb-4 form-control" id="inputgraph" placeholder="Username ">
+                  </div>
+                  <div class="col-md-3">
+                    <div class="row">
+                        <input type="checkbox" class="inputmixergraph" id="inputmixergraph" placeholder="Username ">Mixer
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="form-check">
+                        <input type="checkbox" class="inputtwitchgraph1" id="inputtwitchgraph1" placeholder="Username ">Twitch
+                    </div>
+                  </div>
+                </div>
+                  
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="inputgraph" mb-4 form-control" id="inputgraph" placeholder="Username ">
+                  </div>
+                  <div class="col-md-3">
+                    <div class="row">
+                        <input type="checkbox" class="inputmixergraph" id="inputmixergraph" placeholder="Username ">Mixer
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="form-check">
+                        <input type="checkbox" class="inputtwitchgraph2" id="inputtwitchgraph2" placeholder="Username ">Twitch
+                    </div>
+                  </div>
+                </div>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" onclick="updateGraph('graph')" class="btn btn-primary">Submit</button>
+                </div>
               </div>
             </div>
           </div>
+              </div>
+            </div>
+          </div>
+          <script src="index.js"></script>
         </body>
       </html>
