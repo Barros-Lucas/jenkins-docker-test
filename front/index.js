@@ -130,13 +130,13 @@ function sendUserName(widget){
 		});
 	}
 	
-		    	if (widget == "FollowersCoro")
+		    	if (widget == "Followers_Coro")
 		    	{
-		    		var userName = $("#inputFollowersCoro").val();
+		    		var userName = $("#inputFollowers_Coro").val();
 			    	
 			    	
-			    	var input_mixer = $("#inputmixerFollowersCoro");
-			    	var input_twitch =  $("#inputtwitchFollowersCoro");
+			    	var input_mixer = $("#inputmixerFollowers_Coro");
+			    	var input_twitch =  $("#inputtwitchFollowers_Coro");
 			    	if(input_mixer.is(':checked')){
 			    	   
 			    	   var url = "http://86.195.220.29:8082/getFollowers?username="+userName+"&apiType=mixer";
@@ -150,7 +150,7 @@ function sendUserName(widget){
 		    	    	alert ("Please choose a type")	
 		    	    }
 $.get(url, function( data ) {
-  $("#FollowersCoro").text(data);
+  $("#Followers_Coro").text(data);
 });
 				}
 	
@@ -182,13 +182,13 @@ $.get(url, function( data ) {
 		});
 	}
 	
-		    	if (widget == "FollowersObi")
+		    	if (widget == "Followers_Obi")
 		    	{
-		    		var userName = $("#inputFollowersObi").val();
+		    		var userName = $("#inputFollowers_Obi").val();
 			    	
 			    	
-			    	var input_mixer = $("#inputmixerFollowersObi");
-			    	var input_twitch =  $("#inputtwitchFollowersObi");
+			    	var input_mixer = $("#inputmixerFollowers_Obi");
+			    	var input_twitch =  $("#inputtwitchFollowers_Obi");
 			    	if(input_mixer.is(':checked')){
 			    	   
 			    	   var url = "http://86.195.220.29:8082/getFollowers?username="+userName+"&apiType=mixer";
@@ -202,7 +202,7 @@ $.get(url, function( data ) {
 		    	    	alert ("Please choose a type")	
 		    	    }
 $.get(url, function( data ) {
-  $("#FollowersObi").text(data);
+  $("#Followers_Obi").text(data);
 });
 				}
 	
@@ -234,13 +234,13 @@ $.get(url, function( data ) {
 		});
 	}
 	
-		    	if (widget == "FollowersKaribou")
+		    	if (widget == "Followers_Karibou")
 		    	{
-		    		var userName = $("#inputFollowersKaribou").val();
+		    		var userName = $("#inputFollowers_Karibou").val();
 			    	
 			    	
-			    	var input_mixer = $("#inputmixerFollowersKaribou");
-			    	var input_twitch =  $("#inputtwitchFollowersKaribou");
+			    	var input_mixer = $("#inputmixerFollowers_Karibou");
+			    	var input_twitch =  $("#inputtwitchFollowers_Karibou");
 			    	if(input_mixer.is(':checked')){
 			    	   
 			    	   var url = "http://86.195.220.29:8082/getFollowers?username="+userName+"&apiType=mixer";
@@ -254,7 +254,7 @@ $.get(url, function( data ) {
 		    	    	alert ("Please choose a type")	
 		    	    }
 $.get(url, function( data ) {
-  $("#FollowersKaribou").text(data);
+  $("#Followers_Karibou").text(data);
 });
 				}
 	
