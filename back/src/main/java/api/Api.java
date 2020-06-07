@@ -19,28 +19,43 @@ public class Api {
 		LogHandler.addLog("Requesting Hello world", logType.INFO);
 		return "Hello World";
 	}
-	
+
+	/** Function called when the HTTP route "/getViewerCount" is requested to return the viewer Count of a stream to the client
+	 * @param username
+	 * @param apiType
+	 * @return The viewer count, -1 if user not found
+ 	 */
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@GetMapping("/getViewerCount")
-	public int getViewerCount (@RequestParam String username){
+	public int getViewerCount (@RequestParam String username , @RequestParam String apiType){
 		genericDataAccess = new GenericDataAccess();
-		return genericDataAccess.getViewerCount(username);
+		return genericDataAccess.getViewerCount(username , apiType);
 	}
 
+	/** Function called when the HTTP route "/getProfilePict" is requested to return the profile picture of a streamer to the client
+	 * @param username
+	 * @param apiType
+	 * @return the url of the profile pic, null is the user is not found
+	 */
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@GetMapping("/getProfilePict")
-	public String getProfilePict (@RequestParam String username){
+	public String getProfilePict (@RequestParam String username , @RequestParam String apiType){
 		genericDataAccess = new GenericDataAccess();
-		return genericDataAccess.getProfilePict(username);
+		return genericDataAccess.getProfilePict(username , apiType);
 	}
 
+	/** Function called
+	 * @param username
+	 * @param apiType
+	 * @return
+	 */
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@GetMapping("/getFollowers")
-	public int getFollower (@RequestParam String username){
+	public int getFollower (@RequestParam String username , @RequestParam String apiType){
 		genericDataAccess = new GenericDataAccess();
-		return genericDataAccess.getFollowers(username);
+		return genericDataAccess.getFollowers(username , apiType);
 	}
 }

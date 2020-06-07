@@ -1,16 +1,24 @@
 package api.dataAccess;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Map;
+
 public class RequestUtils {
 
-    public static ResponseEntity<String> SimpleHTTPRequest(){
+    /** Send a HTTP request and return the answer
+     * @param url
+     * @param headers
+     * @return the answer in a ResponseEntity(Map)
+     */
+    public static ResponseEntity<Map> SimpleHTTPRequest(String url,HttpHeaders headers) {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "https://data.toulouse-metropole.fr/api/records/1.0/search/?dataset=api-temps-reel-tisseo";
-        ResponseEntity<String> response = restTemplate.getForEntity(url , String.class);
+        final HttpEntity<String> entity = new HttpEntity<String>(headers);
+        ResponseEntity<Map> response = restTemplate.exchange(url, HttpMethod.GET, entity, Map.class);
         return response;
     }
-
-    //672ea81c4d2b8094103259476952c16cab45a16aad0d0e69
 }

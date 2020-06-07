@@ -9,14 +9,25 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Class to manage Server log of the application
+ */
 public class LogHandler {
 
+
+	/**
+	 * Different type of logs
+	 */
 	public enum logType {
 			DEBUG,
 			INFO,
 			ERROR;
 	}
-	
+
+	/** Add a log to the log file
+	 * @param s the line of log
+	 * @param type type of log
+	 */
 	public static void addLog(String s, logType type) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");  
 		LocalDateTime now = LocalDateTime.now();  
